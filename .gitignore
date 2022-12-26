@@ -1,0 +1,16 @@
+node_modules/
+.packages/
+server/*.thriftless
+*.tar.gz
+.log/
+*.log
+static/
+dist/
+.idea/
+package-lock.json
+.DS_Store
+*.thriftless
+.cache
+npm-debug.log*
+yarn-debug.log*
+build/
