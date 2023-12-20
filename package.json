@@ -1,0 +1,9 @@
+{
+  "name": "lint-ecology",
+  "version": "1.0.0",
+  "description": "lint生态脚手架(eslint stylelint husky lint-staged vscode)",
+  "main": "index.js",
+  "repository": "https://github.com/humorHan/lint-ecology.git",
+  "author": "humorhan",
+  "license": "MIT"
+}
