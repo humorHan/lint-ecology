@@ -4,6 +4,9 @@
   "description": "lint生态脚手架(eslint stylelint husky lint-staged vscode)",
   "main": "index.js",
   "repository": "https://github.com/humorHan/lint-ecology.git",
-  "author": "humorhan",
-  "license": "MIT"
+  "author": "humorHan",
+  "license": "MIT",
+  "bin": {
+    "lint-ecology": "bin/index.js"
+  }
 }
