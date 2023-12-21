@@ -46,5 +46,9 @@
       "prettier --write",
       "yarn lint:css"
     ]
-  }
+  },
+  "files": [
+    "template",
+    "core"
+  ]
 }
