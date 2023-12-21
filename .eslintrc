@@ -76,7 +76,7 @@
       "warn",
       {
         "comments": 150,
-        "code": 200
+        "code": 150
       }
     ],
     "no-restricted-globals": "off",

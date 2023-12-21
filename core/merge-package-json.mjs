@@ -1,19 +1,19 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import { tryCatch } from "./utils/index.mjs";
 
 export default async function mergePackageJson(spinner) {
   return await tryCatch(
     async () => {
       const cwd = process.cwd();
-      const packageConfigPath = path.join(
-        cwd,
-        "template",
-        "package",
+      const packageJsonPath = path.join(
+        fileURLToPath(import.meta.url),
+        "../../",
         "package.json"
       );
       const packageConfig = JSON.parse(
-        fs.readFileSync(packageConfigPath, "utf-8")
+        fs.readFileSync(packageJsonPath, "utf-8")
       );
       const projectPackageJson = JSON.parse(
         fs.readFileSync(`${cwd}/package.json`, "utf8")

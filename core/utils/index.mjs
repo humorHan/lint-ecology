@@ -11,8 +11,3 @@ export const tryCatch = (cb, errorCb) => {
   }
   return res;
 };
-
-export const getJsonObj = () => {
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-};

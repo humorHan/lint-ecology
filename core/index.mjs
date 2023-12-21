@@ -3,13 +3,19 @@
 import ora from "ora";
 import { program } from "commander";
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
 import copyConfigFile from "./copy-config-file.mjs";
 import mergePackageJson from "./merge-package-json.mjs";
 import installPackage from "./install-package.mjs";
 
-const packageInfo = JSON.parse(
-  fs.readFileSync(process.cwd() + "/package.json", "utf-8")
+const packageJsonPath = path.join(
+  fileURLToPath(import.meta.url),
+  "../../",
+  "package.json"
 );
+const packageInfo = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
 // 版本号
 program.version(packageInfo.version);
