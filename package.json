@@ -2,11 +2,49 @@
   "name": "lint-ecology",
   "version": "1.0.0",
   "description": "lint生态脚手架(eslint stylelint husky lint-staged vscode)",
-  "main": "index.js",
+  "main": "core/index.js",
   "repository": "https://github.com/humorHan/lint-ecology.git",
   "author": "humorHan",
   "license": "MIT",
   "bin": {
-    "lint-ecology": "bin/index.js"
+    "lint-ecology": "core/index.mjs"
+  },
+  "scripts": {
+    "init": "core/index.mjs init",
+    "prepare": "husky install",
+    "lint:js": "eslint --fix --ext .js,.jsx,.vue",
+    "lint:css": "stylelint --fix"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "ora": "^7.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^13.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-vue": "^7.15.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.1.2",
+    "prettier": "^3.1.1",
+    "vue-eslint-parser": "^7.10.0"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "yarn lint:js"
+    ],
+    "**/*.vue": [
+      "prettier --write",
+      "yarn lint:js",
+      "yarn lint:css"
+    ],
+    "**/*.{css,scss}": [
+      "prettier --write",
+      "yarn lint:css"
+    ]
   }
 }
