@@ -6,16 +6,13 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "prettier --write",
       "yarn lint:js"
     ],
     "**/*.vue": [
-      "prettier --write",
       "yarn lint:js",
       "yarn lint:css"
     ],
     "**/*.{css,scss}": [
-      "prettier --write",
       "yarn lint:css"
     ]
   },
@@ -29,7 +26,6 @@
     "eslint-plugin-vue": "^7.15.1",
     "husky": "^7.0.4",
     "lint-staged": "^11.1.2",
-    "prettier": "^3.1.1",
     "stylelint": "^16.0.2",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recommended-scss": "^14.0.0",

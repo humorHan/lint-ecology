@@ -11,7 +11,7 @@
     "node": true,
     "es6": true
   },
-  "extends": ["airbnb-base", "plugin:vue/essential"],
+  "extends": ["airbnb-base", "plugin:vue/vue3-essential"],
   "rules": {
     "import/extensions": [
       "off",
